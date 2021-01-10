@@ -76,8 +76,7 @@ if (!address) {
 	logger.info('Advertised server address will be derived from HTTP request headers.');
 }
 
-app.get('/', (_, res) => {
-	app.get('/', (req, res) => {
+app.get('/', (req, res) => {
 	res.render('index', { connectionCount, address: (address || addressFromRequest(req)), headers: req.headers });
 });
 
